@@ -8,8 +8,6 @@
 </head>
 <body>
     <header>
-        <h1>John De Castro</h1>
-        
         <nav>
             <ul>
                 <li><a href="index.html">Home Page</a></li>
@@ -23,6 +21,57 @@
 
     <main>
         
-    </main>
+        <h2>Contact Me</h2>
+
+        <p>Feel free to fill out a form and leave a message!</p>
+
+        <form action="#" method="POST">
+            <fieldset>
+                <legend>Contact Form</legend>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@email.com" required><br><br>
+
+                <label for="topic">Reason for Contact:</label>
+                <select id="topic" name="topic">
+                    <optgroup label="Career">
+                        <option value="resume">Resume Inquiry</option>
+                        <option value="project">Collaboration Request</option>
+                    </optgroup>
+                    <optgroup label="Other">
+                        <option value="general">General Contact</option>
+                    </optgroup>
+                </select><br><br>
+
+                 <label for="message">Message:</label><br>
+                 <textarea id="message" name="message" rows="5" cols="40" placeholder="Write message here"></textarea><br><br>
+
+                 <label for="referrer">How did you find me?</label>
+                 <input list="referrer-options" id="referrer" name="referrer">
+                 <datalist id="referrer-options">
+                    <option value="LinkedIn"></option>
+                    <option value="Referral"></option>
+                    <option value="Other"></option>
+                 </datalist><br><br>
+
+                 <button type="submit">Send Form</button>
+            </fieldset>
+        </form>
+
+        <p>
+            As a quick shortcut, 
+            you can use <kbd>Cmd + C</kbd> to copy the email address 
+            and <kbd>Cmd + V</kbd> to paste it into your email app!
+        </p>
+
+        <hr>
+
+    <footer>
+        <p>© 2025 John De Castro</p>
+        <address>Email: <a href="mailto:jpdecastro@ucsd.edu">jpdecastro@ucsd.edu</a></address>
+    </footer>
 </body>
 </html>
