@@ -7,11 +7,11 @@
 
 /* Root Vars */
 :root {
-  --primary-color: 1e3a8a;
+  --primary-color: #1e3a8a;
   --accent-color: #ff6347;
   --background-color: #f9f9f9;
   --text-color: #333;
-  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -25,10 +25,24 @@ body {
 }
 
 header {
-  background-color: var(--primary-color, navy);
-  color: var(--text-color), #333;
+  background-color: var(--background-color, #f9f9f9);
+  color: var(--text-color, #333);
   padding: 1rem 0;
   text-align: center;
+}
+
+main {
+  padding: 2rem;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  animation: fadeSlideIn 1s ease-out forwards;
 }
 
 nav ul {
@@ -40,14 +54,27 @@ nav ul {
 }
 
 nav ul li a {
+  display: inline-block;
   color: var(--text-color, #333);
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:focus-visible{
+  outline: 2px solid var(--accent-color, tomato);
+  outline-offset: 4px;
+}
+
+nav ul li a:active {
+  outline: none;
+  box-shadow: none;
+  transform: scale(0.97);
 }
 
 nav ul li a:hover {
   color: var(--accent-color, tomato);
+  transform: scale(1.05);
 }
 
 main {
@@ -58,18 +85,49 @@ main {
 }
 
 footer {
-  background-color: var(--primary-color, #333);
-  color: var(--text-color), #333;
+  background-color: var(--background-color, #f9f9f9);
+  color: var(--text-color, #333);
   text-align: center;
   padding: 1rem 0;
 }
 
 footer a {
-  color: var(--text-color), #333;
+  color: var(--text-color, #333);
   text-decoration: none;
 }
 
 footer a:hover {
   text-decoration: underline;
   color: var(--accent-color, tomato);
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 60px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.25rem;
+  }
+
+  body {
+    font-size: 0.95rem;
+  }
 }
