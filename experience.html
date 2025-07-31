@@ -28,13 +28,19 @@
     <main>
         <h2>My Life Experiences</h2>
 
-        <experience-card></experience-card>
-        <experience-card></experience-card>
+        <div style="margin-bottom: 1rem;">
+            <button id="load-local">Load Local</button>
+            <button id="load-remote">Load Remote</button>
+        </div>
+
+        <div id="card-container"></div>
     </main>
 
     <footer>
         <p>© 2025 John De Castro</p>
         <address>Email: <a href="mailto:jpdecastro@ucsd.edu">jpdecastro@ucsd.edu</a></address>
     </footer>
+
+    <script type="module" src="experience-data.js"></script>
 </body>
 </html>
