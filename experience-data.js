@@ -42,7 +42,7 @@ function loadLocal() {
 
 //from remote
 function loadRemote() {
-    fetch('https://my-json-server.typicode.com/YOUR_USERNAME/YOUR_REPO/experiences')
+    fetch('https://my-json-server.typicode.com/JohnDeCastro/experience-data/experiences')
     .then(res => res.json())
     .then(data => {
         document.getElementById('card-container').innerHTML = '';
